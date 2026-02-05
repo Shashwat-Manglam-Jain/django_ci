@@ -23,7 +23,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run migrations check
-        run: python manage.py check
+        run: |
+          cd ecomerse
+          python manage.py test
 
       - name: Run tests
         run: python manage.py test

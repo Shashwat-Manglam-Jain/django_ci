@@ -27,5 +27,8 @@ jobs:
           cd ecomerse
           python manage.py test accounts
 
+      
       - name: Run tests
-        run: python manage.py test
+        run: |
+          cd ecomerse
+          python manage.py test

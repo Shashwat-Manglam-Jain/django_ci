@@ -25,7 +25,7 @@ jobs:
       - name: Run migrations check
         run: |
           cd ecomerse
-          python manage.py test
+          python manage.py test accounts
 
       - name: Run tests
         run: python manage.py test

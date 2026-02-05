@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900');
+        </style>
+    </head>
+    <body style="background: #f5f8fa;font-family: 'Roboto', sans-serif;">
+        <div style="width: 90%;max-width:600px;margin: 20px auto;background: #ffffff;">
+            <section style="margin: 0 15px;color:#425b76;">
+                {% if email_type == 'registration' %}
+                    <h2 style="margin: 40px 0 27px 0;text-align: center;">Thank you for registration</h2>
+                    <hr style="border:0;border-top: 1px solid rgba(66,91,118,0.3);max-width: 50%">
+                    <p style="font-size:15.5px;font-weight: bold;margin:40px 20px 15px 20px;justify-content: center;text-align: center;align-items: center;">Hi {{username}}, Thank you for registering with us.</p>
+                {% elif email_type == 'password_reset' %}
+                    <h2 style="margin: 40px 0 27px 0;text-align: center;">Password Reset Request</h2>
+                    <hr style="border:0;border-top: 1px solid rgba(66,91,118,0.3);max-width: 50%">
+                    <p style="font-size:15.5px;font-weight: bold;margin:40px 20px 15px 20px;justify-content: center;text-align: center;align-items: center;">Hi {{email}},</p>
+                    <p style="font-size:15.5px;margin:20px;line-height:1.8;justify-content: center;text-align: center;align-items: center;">We received a request to reset your password. so please click the link to reset your password</p>
+                    <p style="font-size:15.5px;margin:20px;line-height:1.8;justify-content: center;text-align: center;align-items: center;"><a href="{{reset_link}}" style="color: #425b76;">Click here to reset your password</a></p>
+                {% else %}
+                    <h2 style="margin: 40px 0 27px 0;text-align: center;">Welcome</h2>
+                    <hr style="border:0;border-top: 1px solid rgba(66,91,118,0.3);max-width: 50%">
+                    <p style="font-size:15.5px;font-weight: bold;margin:40px 20px 15px 20px;justify-content: center;text-align: center;align-items: center;">Thank you for your interest in our service.</p>
+                {% endif %}
+            </section>
+        </div>
+    </body>
+</html>
